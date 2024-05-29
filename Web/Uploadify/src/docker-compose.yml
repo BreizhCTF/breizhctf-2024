@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    ports:
+      - "9000:80"
+    environment:
+      ADMIN_PASSWORD: a21cc45648b3eab9f5a0a05fccbc3fe6dc11f3eba252c9888efbfaab70228ea4

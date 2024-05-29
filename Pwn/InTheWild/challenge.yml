@@ -1,0 +1,44 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "CTF A/D - In The Wild"
+author: "Itarow"
+category: Pwn
+description: |-4
+    ![img](/files/chall/inthewild.jpeg)
+
+    Durant le CTF A/D notre équipe s'est fait compromettre un de nos services sur lequel tournait un binaire écrit en C de nos souvenirs. Nous n'avons plus la main sur le service, veuillez nous aider en reprenant la main dessus ...
+
+    Pour vous aider nous avons seulement l'enregistrement de l'exploit lancé par l'équipe adverse, en espérant que ça vous suffise. Bon courage !
+
+    Auteur : [Itarow](https://twitter.com/0xItarow)
+
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: ctfkit
+extra:
+    template_name: inthewild
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{C47ch1n6_1n_7h3_w1ld_3xpl017_l1k3_4_b055_EZ!!}
+# Visible uniquement par les admins du CTFd
+topics:
+    - Pwn
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Moyen
+
+# Pièces jointes du challenge
+files:
+    - ./dist/inthewild.pcap
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

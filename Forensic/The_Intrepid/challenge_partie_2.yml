@@ -1,0 +1,67 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "The Intrepid (2/4)"
+author: "Abyss Watcher"
+category: Forensic
+description: |-4
+    **De :** `the-intrepid-journal@notproton.me`  
+    **À :** `dfir-independant-consulting@notproton.me` (vous)
+
+    **Objet :** Re : [`www.dfir-independant-consulting.notcom`] Nouveau contrat : The Intrepid journal
+
+    > [...] Je vous recommande d'arrêter temporairement votre application, sans re-déployer la VM. Notre objectif est d'identifier le *modus operandi* de l'intrus, afin de patcher complètement l'environnement. Pourriez-vous me fournir une capture RAM et disque de votre VM ?
+
+    Nous vous remercions pour cette première analyse, l'application est temporairement arrêtée, et nous gérons la communication utilisateur de notre côté. Le code source est également intact, aucune porte dérobée n'est présente en son sein.
+
+    Aucune trace d'exécution des charges précédemment identifiées n'ont été remarquées sur le système, qui a par ailleurs été malencontreusement redémarré par notre administrateur système, dans une tentative d'expulsion de l'attaquant. Nous ne pouvons vous fournir, comme demandé, qu'une capture RAM post-redémarrage. 
+    Ne vous étonnez d'ailleurs pas de retrouver quelques unes de ses tentatives d'analyse à chaud, dans les traces.
+
+    ---
+
+    Identifiez :
+
+    - Le chemin disque complet, du fichier de persistance, contenant la commande utilisée pour (re)lancer le procédé malveillant
+    - Le nom de l'outil/wrapper utilisé pour exécuter le processus malveillant
+    - Le chemin Web, employé par la charge virale, pour transmettre des informations sur les identifiants de partage, à un serveur distant
+
+    Format de flag : `BZHCTF{chemin_disque_persistance|nom_outil|chemin_web_vers_serveur}`  
+    Exemple de flag : `BZHCTF{/home/user/fichier.txt|empire|http://127.0.0.1/my_endpoint}`
+
+    Auteur : [Abyss Watcher](https://github.com/Abyss-W4tcher)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{/etc/systemd/system/apt-daily.service|fileless-xec|http://82.105.114.101/6e6f7468696e6768657265}
+    - BZHCTF{/etc/systemd/system/apt-daily.service|fileless-xec|http://82.105.114.101/6e6f7468696e6768657265/}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Disk
+    - RAM
+    - Malware
+    - Backdoor
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Moyen
+
+# Pièces jointes du challenge
+files:
+    # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+    - dist/partie_2/intrepid.ram.tar.gz
+    - dist/partie_2/intrepid.vmdk.tar.gz
+    - dist/partie_2/Volatility_ressources.zip
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

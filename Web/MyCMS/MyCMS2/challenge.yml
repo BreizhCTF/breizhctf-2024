@@ -1,0 +1,42 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "MyCMS (2/2)"
+author: "Worty"
+category: Web
+description: |-4
+    ![img](https://media1.tenor.com/m/Xjx6rs9UKIIAAAAC/llenen-el-form.gif)
+
+    Une nouvelle plateforme qui permet de créer des formulaires, c'est pas génial ?
+
+    *Les sources de l'application sont les même que pour la première étape*
+
+    Auteur : [Worty](https://twitter.com/_worty)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: ctfkit
+extra:
+    template_name: mycms
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{cust0m_g4dg3t_ch41n_1s_fun_!!}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - PHP
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Difficile
+    - PHP
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+

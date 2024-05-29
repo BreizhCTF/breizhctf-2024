@@ -1,0 +1,43 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Can't follow"
+author: "HellDiner"
+category: Reverse
+description: |-4
+    ![img](/files/chall/CantFollow.jpg)
+
+    Ce programme ne paraît pas très complexe. Pourtant, en essayant de le déboguer nos experts se sont heurtés à un comportement surprenant, comme s'il leur manquait une partie des instructions...
+
+    Auteur : [HellDiner](https://github.com/h311d1n3r)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{4_g00d_01d_w4y_t0_h1d3_c0ntr01_f10w}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Local
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Facile
+    - Nanomites
+
+# Pièces jointes du challenge
+files:
+    - dist/CantFollow
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+

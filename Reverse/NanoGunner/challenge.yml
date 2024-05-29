@@ -1,0 +1,46 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "NanoGunner"
+author: "HellDiner"
+category: Reverse
+description: |-4
+    ![img](/files/chall/NanoGunner.jpg)
+
+    Le code source du logiciel permettant la mise à feu de projectiles de dernière génération a été perdu par un acte de sabotage interne à nos services. De plus, la clé d'activation que nous possédons semble ne plus fonctionner. Nous nécessitons vos talents en rétro-ingénierie pour en fabriquer une nouvelle et être à même d'effectuer des frappes stratégiques sur les positions ennemies. Quelques notions de physique pourraient vous être nécessaires mais nul doute qu'une intelligence artificielle bien connue saura vous aiguiller sur ce point. Vous aurez sans doute besoin d'installer la bibliothèque libgtkmm-3.0 pour avoir accès à notre interface graphique. Bon courage !
+
+    Auteur : [HellDiner](https://github.com/h311d1n3r)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{art1ll3ry_a1mb0t}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Local
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Difficile
+    - Nanomites
+    - VM
+    - Équations paramétriques
+
+# Pièces jointes du challenge
+files:
+    - dist/NanoGunner
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+
+

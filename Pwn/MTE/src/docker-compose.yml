@@ -1,0 +1,10 @@
+services:
+  mte:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: mte_bzhctf2024
+    ports:
+      - "127.0.0.1:1337:1337"
+    cap_drop:
+      - ALL

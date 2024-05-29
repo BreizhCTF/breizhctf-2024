@@ -1,0 +1,19 @@
+FROM ubuntu:22.04
+ENV TIMEZONE Europe/Paris
+
+RUN apt-get update && apt-get install -y socat python3-pip qemu-user && rm -rf /var/lib/apt/lists/*
+
+COPY flag.txt /flag.txt 
+RUN mv /flag.txt /flag_$(md5sum /flag.txt | awk '{print $1}')
+
+RUN useradd -u 666 --home=/challenge -U challenge
+WORKDIR /challenge/
+
+USER challenge
+
+COPY ./mte /challenge/
+COPY ./lib /challenge/lib
+
+ENV SOCAT_OPTIONS=",stderr,pty,cfmakeraw,echo=0"
+
+ENTRYPOINT ["sh", "-c", "socat TCP-LISTEN:1337,reuseaddr,fork EXEC:'env -i qemu-aarch64 -L /challenge/ /challenge/mte'${SOCAT_OPTIONS}"]

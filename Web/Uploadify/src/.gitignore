@@ -1,0 +1,4 @@
+.idea/
+vendor/
+venv/
+web/vendor/

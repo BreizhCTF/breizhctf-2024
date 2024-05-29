@@ -1,0 +1,47 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Inria - Casino Limit"
+author: "PIRAT');"
+category: Sponsors
+description: |-4
+    ![casinolimit-inria](/files/chall/casinolimit-inria.png)
+
+    Faites respecter votre droit à l’oubli en supprimant vos données de la base de données du Casino Limit !
+    Question ? [https://discord.com/invite/wC3jCyFqQE](https://discord.com/invite/wC3jCyFqQE)
+
+    Auteur : [Inria - PIRAT\');](#)
+
+
+type: dynamic
+connection_info: "Utiliser l'url donnée sur la carte de jeu distribuée à votre équipe."
+
+
+# Points # ne pas toucher : système de notation dynamique
+# plus un challenge est résolu, moins il vaudra de points.
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+# Optional settings
+
+flags:
+    - BZHCTF{C@m1lle-FLAG-EnJoy-The-Pirat-ChaLLenGe}
+
+# Topics are used to help tell what techniques/information a challenge involves
+# La variable "topics" n'est visible que des administrateurs (permet d'avoir des indications rapides sur la solution du challenge).
+# Accepts strings
+topics:
+    - CVE-2022-29078
+
+# Vous pouvez inclure des tag comme le type de chall (web, crypto, ...) et la difficulté estimée ((Très Facile, Facile, Moyen, Difficile, Très Difficile))
+tags:
+    - Moyen
+    - Pentest
+    - Web
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

@@ -1,0 +1,35 @@
+name: "4 - Un crime aux Dieux"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/4_Crime_Aux_Dieux.jpeg)
+
+    Il est désormais nécessaire de s'intéresser à la victime de ce vol odieux, Félicien de Grace fils de Gastien de la Plougarnel.
+
+    Vous trouverez, sur l'intranet de votre Direction, les données de monsieur de Grace qui ont été copiées dans le cadre de l'enquête.
+
+    D'après nos informations, Félicien se serait visiblement brouillé avec Alcibiade ; ce qui aurait en partie conduit au vol. Fouillez ses données, retrouvez les traces de cette querelle et identifiez leur dernier échange.
+    En cas de besoin, consultez vos collègues enquêteurs.
+
+    Format de flag : `BZHCTF{JJMMAA:HHhMM}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+files:
+    - dist/Plainte.pdf
+
+flags:
+    - BZHCTF{050424:18h04}
+    - BZHCTF{050424:18H04}
+
+requirements:
+    - "3 - Pygmalion et Galatée"
+
+version: "0.1"

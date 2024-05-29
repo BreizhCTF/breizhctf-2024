@@ -1,0 +1,60 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "CTF A/D - Tampered (2/2)"
+author: "Itarow"
+category: Forensic
+description: |-4
+    ![img](/files/chall/tampered_2.jpeg)
+
+    Super vous avez trouvé le malware, maintenant on veut savoir ce qu'il fait. Voici ce que vous devez trouver :
+    - (1) Trouvez les commandes qui sont interdites par le malware
+    - (2) Trouvez la commande qui désactive le malware
+    - (3) Trouvez la commande secrète qui déclenche un dernier comportement malveillant
+    - (4) Trouvez l'un des noms de fichier que le malware vérifie pour empêcher sa lecture. (autre que flag.txt au vu de la description)
+
+    Le format de flag est : `BZHCTF{(1)|(2)|(3)|(4)}`
+    Pour les commandes interdites, vous les séparerez par des virgules, dans l'ordre alphabétique.
+    
+    Voici un exemple de flag : `BZHCTF{id,whoami|grep|strings|foobar}`
+    
+    sha256sum bzhctf.ova : `08f37ff06789ddf2c8a112375b7800a7d5829c500d0a612071d17a1509a95e69`
+
+    Identifiants de la VM : `user:user`
+
+    Note : Il est **fortement recommandé** de compléter la première partie avant de faire celle-ci.
+
+    Auteur : [Itarow](https://twitter.com/0xitarow)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{find,ps|zcat|ls|cmdlin}
+    - BZHCTF{find,ps|zcat|ls|cmdline}
+    - BZHCTF{find,ps|zcat|ls|bootstrap}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - vm
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Moyen
+    - VM
+    - Linux
+
+# Pièces jointes du challenge
+#files:
+#    - src/vm-tampered.ova # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

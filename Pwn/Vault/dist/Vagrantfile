@@ -1,0 +1,14 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/debian12"
+  config.vm.box_version = "4.3.0"
+  config.vbguest.auto_update = false
+  config.vm.box_check_update = false
+  config.vm.synced_folder ".", "/vagrant"
+  config.vm.provision "shell" do |s|
+    s.path = "vagrant_provision.sh"
+  end
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 3000
+    v.cpus = 2
+  end
+end

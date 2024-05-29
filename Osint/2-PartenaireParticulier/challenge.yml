@@ -1,0 +1,29 @@
+name: "2 - Partenaire particulier"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/2_Partenaire_Particulier.jpeg)
+
+    D'après nos informations, Alessandro n'aurait pas pu agir seul. Il semblerait qu'un certain "Alcibiade VAILLANCOUR" serait lié, de près ou de loin, au vol de cette collection. 
+    Votre objectif est de comprendre ce qui relie ces deux personnes.
+
+    Format de flag : `BZHCTF{Ville}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{Dinard}
+    - BZHCTF{DINARD}
+    - BZHCTF{dinard}
+
+requirements:
+    - "1 - La Grande Vague"
+
+version: "0.1"

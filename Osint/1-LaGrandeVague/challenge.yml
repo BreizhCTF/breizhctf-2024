@@ -1,0 +1,44 @@
+name: "1 - La Grande Vague"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/1_La_Grande_Vague.jpg)
+
+    Afin de débuter cette enquête, il est nécessaire de s'intéresser au responsable du vol ; Alessandro FIZZENTI. 
+    La cible s'est rendue à un vernissage qui a eu un impact sur sa vie. Retrouvez le nom de ce dernier.
+
+    Format de flag : `BZHCTF{Mon_super_flag}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{Ocean_en_toile}
+    - BZHCTF{Oceanentoile}
+    - BZHCTF{Ocean en toile}
+    - BZHCTF{ocean_en_toile}
+    - BZHCTF{oceanentoile}
+    - BZHCTF{ocean en toile}
+    - BZHCTF{OCEAN_EN_TOILE}
+    - BZHCTF{OCEANENTOILE}
+    - BZHCTF{OCEAN EN TOILE}
+    - BZHCTF{Océan_en_toile}
+    - BZHCTF{Océanentoile}
+    - BZHCTF{Océan en toile}
+    - BZHCTF{océan_en_toile}
+    - BZHCTF{océanentoile}
+    - BZHCTF{océan en toile}
+    - BZHCTF{OCÉAN_EN_TOILE}
+    - BZHCTF{OCÉANENTOILE}
+    - BZHCTF{OCÉAN EN TOILE}
+
+requirements:
+    - "0 - Recrutement"
+
+version: "0.1"

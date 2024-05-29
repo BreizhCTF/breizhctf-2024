@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  emulator:
+    image: registry-bzh.alfred.cafe/breizh-ctf-2024/challenges/miroir_miroir:latest
+    # mem_limit: 3.5G
+    # cpus: 1
+    cap_drop:
+      - ALL
+    devices:
+       - "/dev/kvm:/dev/kvm"
+    ports:
+      - 3000:3000
+      

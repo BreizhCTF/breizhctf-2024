@@ -1,0 +1,46 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Hello There"
+author: "Worty"
+category: Pwn
+description: |-4
+    ![hello](https://media1.tenor.com/m/-z2KfO5zAckAAAAC/hello-there-baby-yoda.gif)
+
+    Un petit programme qui permet de renseigner votre nom et de vous dire (à la seconde près !) quand votre nom a été enregistré !
+
+    Ce ne serait pas mieux d'afficher le flag ? :)
+
+    Auteur : [Worty](https://twitter.com/_worty)
+
+connection_info: nc challenge.ctf.bzh 30013
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{l1ttl3_b4by_0v3rfl0w}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Pwn
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Facile
+
+# Pièces jointes du challenge
+files:
+    # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+    - dist/main
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

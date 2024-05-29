@@ -1,0 +1,61 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "The Intrepid (4/4)"
+author: "Abyss Watcher"
+category: Forensic
+description: |-4
+    **De :** `the-intrepid-journal@notproton.me`  
+    **À :** `dfir-independant-consulting@notproton.me` (vous)
+
+    **Objet :** Re : Re : [`www.dfir-independant-consulting.notcom`] Nouveau contrat : The Intrepid journal
+
+    > [...] Je dois encore comprendre comment il lui est possible de mettre la main sur les identifiants de partage. En effet, les informations transmises entre la charge virale et le serveur ne sont que partielles. Il semblerait qu'une charge additionnelle se soit ancrée à la racine même du système Linux. Au cours de mes analyses, je serais sûrement amené à déchiffrer un fichier sur le serveur, lequel puis-je utiliser pour valider mes recherches ? Enfin, pourriez-vous me transmettre la configuration de votre machine virtuelle, afin de pouvoir mettre en place un environnement iso-prod ?
+
+    Nous vous autorisons à lire le fichier partagé `61e82b86235a2228c477f1ce8c5bb7e0bac76a82`, car nous l'avions téléversé nous-même, et il ne contient rien de confidentiel. La configuration `vagrant` est jointe à ce mail.
+
+    ---
+
+    Identifiez :
+
+    - Le contenu déchiffré du fichier spécifié dans la description, ou celui du mail joint à ce challenge. Chacun contenant un secret valide, à choisir pour valider l'épreuve. PS : Les fichiers en clair sont tous deux des fichiers ZIP.
+
+    Format de flag : `BZHCTF{contenu_secret}`  
+    Exemple de flag : `BZHCTF{THIS_IS_THE_SECRET}`
+
+    Auteur : [Abyss Watcher](https://github.com/Abyss-W4tcher)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{2.12046}
+    - BZHCTF{10.26487}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Rootkit
+    - Reverse
+    - PRNG
+    - Decryption
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Difficile
+
+# Pièces jointes du challenge
+files:
+    # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+    - dist/partie_4/config_vagrant.txt
+    - dist/partie_4/mail_anonyme.md
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

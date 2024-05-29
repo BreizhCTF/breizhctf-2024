@@ -1,0 +1,50 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Miroir Miroir"
+author: "Abyss Watcher"
+category: Mobile
+description: |-4
+    ![img](/files/chall/miroir_miroir.png)
+
+    Depuis deux années, vous traquez et espionnez un réseau de grande envergure de blanchiment d'argent. Grâce à votre travail acharné, vous avez réussi à infiltrer un agent sur le terrain. Via des techniques de social engineering, il a été capable d'obtenir le mot de passe du portefeuille crypto d'une de leurs têtes pensantes. Seulement, l'accès est protégé par une double authentification... 
+    
+    Votre agent vous garantit qu'il sera capable de manipuler le criminel pour lui faire installer une application sur son téléphone Android 14, et de la lancer en arrière-plan. En se basant sur ses informations, vous déduisez qu'il serait possible d'utiliser la vulnérabilité CVE-2023-40094, pour déverrouiller le téléphone à un moment opportun et obtenir le code 2FA. Vous mettez en place un émulateur, puis commencez à développer...
+    
+    *Des instructions sont disponibles dans le fichier `instructions.md`.*
+
+    Auteur : [Abyss Watcher](https://github.com/Abyss-W4tcher)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: ctfkit
+extra:
+    template_name: miroirmiroir
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{k3yGUaRD_is_l0ng_G0N3_Away_#;#}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Android
+    - APK
+    - CVE
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Difficile
+
+# Pièces jointes du challenge
+files:
+    # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+    - dist/api_34_android_14_security_2023-09-05.tar.gz
+    - dist/instructions.md
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

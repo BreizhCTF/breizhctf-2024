@@ -1,0 +1,43 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "All is in"
+author: "HellDiner"
+category: Reverse
+description: |-4
+    ![img](/files/chall/AllIsIn.jpg)
+
+    Est-il bien difficile de retrouver où est cachée la chaîne qui vous permettra de résoudre ce challenge ? N'existe-t-il pas un moyen encore plus simple de la récupérer ?
+
+    Auteur : [HellDiner](https://github.com/h311d1n3r)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{P3_f1l3s_h4v3_s0_m4ny_f34tur3s}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Local
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Facile
+    - PE
+
+# Pièces jointes du challenge
+files:
+    - dist/AllIsIn.exe
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+

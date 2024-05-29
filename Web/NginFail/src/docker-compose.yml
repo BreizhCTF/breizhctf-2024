@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: nginfail
+    restart: unless-stopped
+    networks:
+      - local-network
+    ports:
+      - "80:80"
+
+networks:
+  local-network:

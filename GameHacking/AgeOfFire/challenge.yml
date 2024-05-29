@@ -1,0 +1,46 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Age of Fire"
+author: "HellDiner"
+category: Game Hacking
+description: |-4
+    ![img](/files/chall/AgeOfFire.jpg)
+
+    Pour cette seconde tâche, Galahad a pour mission d'allumer une torche placée devant l'entrée du village menant au dangereux "Pont de l'épée". Pour mener à bien sa mission, Merlin lui a confié un puissant sort permettant de tirer des boules de feu. Mais notre héros a oublié comment le déclencher... Aidez-le à retrouver la mémoire et à lancer son sort sur la torche pour l'enflammer.
+    Vous pouvez effectuer les challenges de cette série dans l'ordre que vous souhaitez.
+
+    Auteur : [HellDiner](https://github.com/h311d1n3r)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{a_great_way_to_lower_heating_bills}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Local
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Moyen
+    - Scanning mémoire
+    - Rétro-ingénierie Unity
+
+# Pièces jointes du challenge
+files:
+    - ../dist/Galahad_Quest.zip
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+
+

@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    container_name: laravel_app
+    restart: unless-stopped
+    networks:
+      - local-network
+    ports:
+      - "80:80"
+    cap_add:
+      - LINUX_IMMUTABLE
+
+networks:
+  local-network:
+  

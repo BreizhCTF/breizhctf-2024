@@ -1,0 +1,2 @@
+src/vm-tampered.ova filter=lfs diff=lfs merge=lfs -text
+dist/bzhctf.ova filter=lfs diff=lfs merge=lfs -text

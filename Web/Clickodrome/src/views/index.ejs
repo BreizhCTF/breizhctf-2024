@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clickodrome</title>
+  <!-- Styles Bootstrap (CDN) -->
+  <link href="/static/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="/static/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="/static/jquery.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa; /* Couleur de fond */
+    }
+    .card {
+      border: 2px solid #343a40; /* Bordure grise foncée */
+      border-radius: 15px; /* Coins arrondis */
+      background-color: #fff; /* Fond blanc */
+      transition: all 0.3s ease-in-out; /* Animation de transition */
+    }
+    .card:hover {
+      transform: translateY(-5px); /* Effet de surélévation au survol */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère au survol */
+    }
+    .card-title {
+      color: #007bff; /* Titre bleu */
+    }
+    .card-text {
+      color: #6c757d; /* Texte gris */
+    }
+    .btn-primary {
+      background-color: #007bff; /* Bouton bleu */
+      border-color: #007bff; /* Bordure bouton bleu */
+    }
+    .btn-primary:hover {
+      background-color: #0056b3; /* Couleur bouton bleu au survol */
+      border-color: #0056b3; /* Bordure bouton bleu au survol */
+    }
+    .btn-danger {
+      position: absolute; /* Position absolue pour le bouton */
+      top: 10px; /* Marge en haut */
+      right: 10px; /* Marge à gauche */
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Clickodrome</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<hr/>
+<br/>
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-2 g-4" id="loading"></div>
+  <div class="row row-cols-1 row-cols-md-2 g-4" id="cartes">
+    <!-- here -->
+    <% for(var i=0; i < data.length; i++) { %>
+      <div class="col">
+        <div class="card h-100">
+          <button class="btn btn-danger" onclick="report('<%= data[i].ref %>')">Signaler cette offre</button>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><%= data[i].title %></h5>
+            <p class="card-text"><%= data[i].desc %></p>
+            <p class="mb-0">Nombre de clics: <span id="nbClicsCarte<%= i %>">0</span></p>
+            <button class="btn btn-primary mt-auto" onclick="incrementerClics('nbClicsCarte<%= i %>')">Clic</button>
+          </div>
+        </div>
+      </div>
+   <% } %>
+     <!-- here -->
+  </div>
+</div>
+
+<!-- JavaScript pour l'incrémentation du compteur -->
+<script>
+  // Fonction d'incrémentation du compteur global
+  function incrementerCompteur() {
+    var compteurElement = document.getElementById("compteur");
+    var compteur = parseInt(compteurElement.textContent);
+    compteurElement.textContent = compteur + 1;
+  }
+
+  // Fonction d'incrémentation du nombre de clics pour une carte spécifique
+  function incrementerClics(spanId) {
+    var spanElement = document.getElementById(spanId);
+    var nbClics = parseInt(spanElement.textContent);
+    spanElement.textContent = nbClics + 1;
+    incrementerCompteur(); // Appel pour incrémenter le compteur global
+  }
+
+  function show_cards(){
+    $("#loading").remove()
+    $("#cartes").show("slow")
+  }
+
+  function report(ref) {
+    let reason = prompt("Vous souhaitez signaler l'offre '"+ref+"', pouvez-vous nous indiquer la raison afin que nous la transmettions à nos administrateurs ?");
+    $("#cartes").hide("slow");
+    $("#loading").append("<p class='lead'>Votre rapport est en cours d'envoi et d'analyse...</p>");
+    if(reason.length == 0) {
+      reason = "None.";
+    }
+    $.ajax({
+      type: "POST",
+      url: "/report",
+      dataType: "json",
+      contentType: "application/json",
+      data: JSON.stringify({"ref":ref, "reason": btoa(reason)}),
+      success: function(resp){
+        alert(resp["message"]);
+        show_cards();
+      },
+      error: function(xhr, status, err) {
+        alert("Une erreur est survenue, merci de réessayer");
+        show_cards();
+      }
+    })
+  }
+</script>
+
+</body>
+</html>

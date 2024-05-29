@@ -1,0 +1,53 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "The Intrepid (3/4)"
+author: "Abyss Watcher"
+category: Forensic
+description: |-4
+    *Note à moi-même :*  
+
+    J'ai l'impression qu'une charge additionnelle s'est ancrée à la racine même du système Linux. Il faut que je parvienne à l'extraire pour en déterminer ses fonctionnalités.
+
+    ---
+
+    Identifiez :
+
+    - Le code décimal, qui passé en argument d'une certaine commande système, permet d'obtenir les privilèges root
+
+    Format de flag : `BZHCTF{code_decimal}`  
+    Exemple de flag : `BZHCTF{94578}`
+
+    Auteur : [Abyss Watcher](https://github.com/Abyss-W4tcher)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{24937}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Rootkit
+    - Volshell
+    - Reverse
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Difficile
+
+# Pièces jointes du challenge
+files:
+    # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+    - dist/partie_3/doc_perso_vol3.md
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

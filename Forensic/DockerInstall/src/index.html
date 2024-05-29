@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécharger Docker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+	
+
+	.copy-button {
+        	display: inline-block;
+        	background-color: #4CAF50;
+        	color: white;
+        	padding: 8px 12px;
+        	border: none;
+        	cursor: pointer;
+        	border-radius: 4px;
+    	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pour télécharger Docker, entrez la commande suivante :</h2>
+        <code>curl http://<span id="site_name"></span>/docker.sh | bash</code>
+        <button onclick="copy()" class="copy-button">Copier</button>
+        <p>Vous pouvez vérifier le contenu en allant directement avec votre navigateur sur :</p>
+        <a href="#" id="docker_link">http://<span id="site_name_2"></span>/docker.sh</a>
+    </div>
+
+    <script>
+	let port = window.location.port != '' ? ':'+window.location.port : '' 
+        document.getElementById('site_name').textContent = window.location.hostname + port;
+        document.getElementById('site_name_2').textContent = window.location.hostname + port;
+        document.getElementById('docker_link').href = 'http://' + window.location.hostname + port + '/docker.sh';
+
+	async function copyToClipboard(textToCopy) {
+    		// Navigator clipboard api needs a secure context (https)
+    		if (navigator.clipboard && window.isSecureContext) {
+        		await navigator.clipboard.writeText(textToCopy);
+    		} else {
+        		// Use the 'out of viewport hidden text area' trick
+        		const textArea = document.createElement("textarea");
+        		textArea.value = textToCopy;
+            
+        		// Move textarea out of the viewport so it's not visible
+        		textArea.style.position = "absolute";
+        		textArea.style.left = "-999999px";
+            
+        		document.body.prepend(textArea);
+        		textArea.select();
+
+        		try {
+            			document.execCommand('copy');
+        		} catch (error) {
+            			console.error(error);
+        		} finally {
+            			textArea.remove();
+        		}
+    		}
+	}
+
+	async function copy() {
+		await copyToClipboard('curl http://'+window.location.hostname + port + '/docker.sh | bash');
+	}
+    </script>
+</body>
+</html>

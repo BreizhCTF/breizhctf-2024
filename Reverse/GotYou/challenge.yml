@@ -1,0 +1,45 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "GotYou"
+author: "HellDiner"
+category: Reverse
+description: |-4
+    ![img](/files/chall/GotYou.jpg)
+
+    Cet étrange programme semble effectuer des opérations incohérentes. Pourtant, il semble qu'une unique chaîne de caractères ait la capacité de le valider. Le loader et la bibliothèque issus de la glibc permettant l'exécution du binaire sont donnés et ont été associés à l'ELF GotYou.
+
+    Auteur : [HellDiner](https://github.com/h311d1n3r)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{_ld_le4ds_ctr1_f10w_}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Local
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Difficile
+    - Sections ELF
+
+# Pièces jointes du challenge
+files:
+    - dist/GotYou
+    - dist/ld-linux-x86-64.so.2
+    - dist/libc.so.6
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+

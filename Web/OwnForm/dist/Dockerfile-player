@@ -1,0 +1,22 @@
+FROM node:18-alpine
+
+ENV SECRET=abcdef
+ENV DOMAIN=localhost
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/lib/chromium/chromium
+ENV XDG_CONFIG_HOME=/tmp
+ENV XDG_CACHE_HOME=/tmp
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN  npm install && \
+    apk add --no-cache  chromium --repository=http://dl-cdn.alpinelinux.org/alpine/v3.10/main
+
+COPY . .
+
+EXPOSE 443
+
+CMD node index.js

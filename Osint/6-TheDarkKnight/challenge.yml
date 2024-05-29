@@ -1,0 +1,33 @@
+name: "6 - The Dark Knight"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/6_The_Dark_Knight.jpeg)
+
+    Alessandro a été arrêté et interrogé par l'officier Antoni DUMOULINI.
+    Le suspect semble avoir été persuadé d'indiquer l'endroit où les bustes sont cachés ; retrouvez les coordonnées GPS de cet endroit.
+
+    Format de flag : `BZHCTF{XX.XXXX, -X.XXXX}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{48.1375,-1.6478}
+    - BZHCTF{48.1375, -1.6478}
+    - BZHCTF{48.1375,-1.6477}
+    - BZHCTF{48.1375, -1.6477}
+
+files:
+    - ./dist/interrogatoire.mp3
+
+requirements:
+    - "5 - Homme de peine"
+
+version: "0.1"

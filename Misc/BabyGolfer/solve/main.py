@@ -1,0 +1,1 @@
+import sys;R=lambda s:s==s[::-1];print(R(sys.argv[1]))

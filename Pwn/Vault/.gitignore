@@ -1,0 +1,6 @@
+src/out/*
+!src/out/.gitkeep
+dist/.vagrant
+dist/ld-linux-x86-64.so.2
+dist/libc.so.6
+vault

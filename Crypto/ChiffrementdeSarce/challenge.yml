@@ -1,0 +1,44 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Chiffrement de Sarce"
+author: "kira"
+category: Crypto
+description: |-4
+    ![cesar](https://media1.tenor.com/m/IaPkp5mN4wkAAAAC/ao-nuts.gif)
+
+    Vous venez de recevoir un message important de Rome, retrouvez le message.
+
+    Auteur : [Kira](#)
+
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{3ZF1irstC1ph3rW1t8Sarce}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Cesar
+
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Facile
+
+
+# Pièces jointes du challenge
+files:
+    - dist/challenge_sarce.py # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

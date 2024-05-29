@@ -1,0 +1,46 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "A well-kept secret"
+author: "HellDiner"
+category: Game Hacking
+description: |-4
+    ![img](/files/chall/AWellKeptSecret.jpg)
+
+    Vous voici arrivé à l'ultime tâche de Galahad, et cette dernière est tout sauf aisée : retrouver la puissante Excalibur, l'épée du Roi Arthur. Ce dernier l'a perdue quelque part sur la carte. Malheureusement, loin de son maître, l'arme est devenue invisible. Vous devez donc rentrer en contact avec un objet invisible, perdu à un endroit quelconque...
+    Vous pouvez effectuer les challenges de cette série dans l'ordre que vous souhaitez.
+
+    Auteur : [HellDiner](https://github.com/h311d1n3r)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{take_it_back_to_king_arthur}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Local
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Difficile
+    - Rétro-ingénierie Unity
+    - Scripting
+
+# Pièces jointes du challenge
+files:
+    - ../dist/Galahad_Quest.zip
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+
+

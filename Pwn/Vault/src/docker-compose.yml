@@ -1,0 +1,10 @@
+services:
+  vault:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: vault_bzhctf2024
+    ports:
+      - "1337:1337"
+    cap_drop:
+      - ALL

@@ -1,0 +1,29 @@
+# Plugins :
+# sudo apt-get install -y libvirt-dev
+# vagrant plugin install vagrant-timezone
+# vagrant plugin install vagrant-vbguest
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu2204"
+  config.vm.box_version = "4.3.0"
+  config.vm.box_check_update = false
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  #config.vm.synced_folder ".", "/vm_share"
+  config.vm.network "forwarded_port", guest: 3535, host: 3535 # tcp server
+  config.vm.network "forwarded_port", guest: 3306, host: 3309 # mysql
+  config.vm.network "forwarded_port", guest: 7500, host: 7500 # phpmyadmin
+
+  if Vagrant.has_plugin?("vagrant-vbguest") then
+    config.vbguest.auto_update = false
+  end
+
+  if Vagrant.has_plugin?("vagrant-timezone")
+    config.timezone.value = "Europe/Paris"
+  end
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 3000
+    v.cpus = 2
+  end
+  
+end

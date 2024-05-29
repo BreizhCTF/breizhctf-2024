@@ -1,0 +1,32 @@
+[
+    {
+        "title":"Cliquez pour gagner 100€",
+        "desc":"Plus vous cliquez, plus vous gagnez !",
+        "ref":"100€"
+    },
+    {
+        "title":"Cliquez pour gagner 200€",
+        "desc":"Plus vous cliquez, plus vous gagnez !",
+        "ref":"200€"
+    },
+    {
+        "title":"Cliquez pour gagner 300€",
+        "desc":"Plus vous cliquez, plus vous gagnez !",
+        "ref":"300€"
+    },
+    {
+        "title":"Cliquez pour gagner 400€",
+        "desc":"Plus vous cliquez, plus vous gagnez !",
+        "ref":"400€"
+    },
+    {
+        "title":"Cliquez pour gagner 500€",
+        "desc":"Plus vous cliquez, plus vous gagnez !",
+        "ref":"500€"
+    },
+    {
+        "title":"Cliquez pour rien !",
+        "desc":"C'est inutile, mais c'est satisfaisant !",
+        "ref":"useless"
+    }
+]

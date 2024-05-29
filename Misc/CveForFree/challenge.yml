@@ -1,0 +1,43 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "CVE4Free"
+author: "W00dy"
+category: Misc
+description: |-4
+    Rust est memory safe, il ne peut donc pas y avoir de corruption memoire n'est-ce pas ? \:-)
+
+    Author: [W00dy](https://twitter.com/Gaburall)
+
+connection_info: nc challenge.ctf.bzh 30014
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{FunB0F_iN_Ru57!:-)}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Misc
+    - Pwn
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Facile
+
+# Pièces jointes du challenge
+files:
+    - ./dist/dist.zip
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+

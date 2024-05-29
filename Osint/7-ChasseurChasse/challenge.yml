@@ -1,0 +1,39 @@
+name: "7 - Chasseur ou chassé"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/7_Chasseur_Chasse.png)
+
+    Félicitations, vous avez pu remonter les pistes et obtenir une compréhension globale de l'enquête. Toutefois, quelque chose ne fait pas sens.
+
+    Il semblerait que certaines informations que nous avions en notre possession avant votre arrivée étaient erronées.
+
+    Vous trouverez en pièces jointes le rapport d'enquête écrit par le responsable de l'affaire, Antoni DUMOULINI. 
+
+    Démêlez le vrai du faux, collaborez avec les enquêteurs de votre service et retrouvez la collection volée.
+
+    Ce challenge comporte une grande partie SE/interactions sociales. Le serveur officiel du commissariat des Jacobinks a ouvert, pour toutes prises de rendez-vous merci de vous y référer: https://discord.com/invite/9zbg4687Ef
+
+    Format de flag : `BZHCTF{?}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{br4v0_p0uR_v0tR3_r3cRu7eMeNt}
+
+files:
+    - dist/Rapport_enquete.pdf
+    - dist/Rapport_affectation.pdf
+    - dist/Plan_couvent.pdf
+
+requirements:
+    - "6 - The Dark Knight"
+
+version: "0.1"

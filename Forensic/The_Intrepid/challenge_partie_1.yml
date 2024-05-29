@@ -1,0 +1,77 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "The Intrepid (1/4)"
+author: "Abyss Watcher"
+category: Forensic
+description: |-4
+
+    *Il est conseillé de réaliser cette série de challenges dans l'ordre : 1, 2, 3 puis 4.*
+
+    **De :** `the-intrepid-journal@notproton.me`  
+    **À :** `dfir-independant-consulting@notproton.me` (vous)
+
+    **Objet :** [`www.dfir-independant-consulting.notcom`] Nouveau contrat : The Intrepid journal
+
+    Bonjour,
+
+    *The Intrepid* est un journal autonome et collaboratif, auquel chacun peut participer et soumettre des investigations et articles.
+    Nos auteurs enquêtent majoritairement sur les structures politiques et économiques de grandes envergures.
+
+    Pour permettre l'échange d'informations et fichiers sensibles, nous avons récemment développé notre propre service de partage de ressources, nommé "er-bridge".
+    Un identifiant est associé à chaque ressource, est connu uniquement du téléverseur, et ne peut être accédé qu'une seule fois pour téléchargement, avant d'être détruit. 
+    Le service est exposé derrière un reverse proxy sur le réseau TOR, et son URL d'accès est en diffusion restreinte. Il est également hébergé dans une machine virtuelle, sur notre serveur.
+
+    Cependant, nous avons reçu des plaintes d'utilisateurs, indiquant que leurs identifiants de partage n'étaient pas accessibles par leurs pairs. 
+    Tout nous porte à croire que quelqu'un télécharge les ressources, impliquant un accès aux identifiants de partage, pourtant transmis de manière unique entre le serveur et l'utilisateur.
+
+    Un traceur applicatif est en place sur notre service, afin de monitorer et ajuster notre code, en fonction de l'usage mémoire occasionné par les différents threads. 
+    Pourriez-vous en analyser les journaux, afin d'identifier si une intrusion s'est produite via l'application ? PS : L'outil d'analyse graphique peut être plus performant avec l'option `--use_external_processor`, ainsi que le navigateur Google Chrome.
+
+    ---
+
+    Identifiez :
+
+    - Une première charge malveillante, injectée pour contourner l'authentification de l'application
+    - La CVE utilisée pour élever les privilèges, déductible de la deuxième charge malveillante, ayant réalisée une exécution de code à distance
+    - Le numéro de thread, durant lequel les charges ont été injectées
+
+    Format de flag : `BZHCTF{charge_contournement_authentification|cve_privesc|numero_thread}`  
+    Exemple de flag : `BZHCTF{"OR(5)#|CVE-2024-3094|487}`
+
+    Auteur : [Abyss Watcher](https://github.com/Abyss-W4tcher)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{$2e5f2ec2ac4b58637c4f5f58032e5f2e$'||(1&&id=300);|CVE-2023-4911|75}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Logs
+    - Viztracer
+    - SQLi
+    - RCE 
+    - Privesc
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Facile
+
+# Pièces jointes du challenge
+files:
+    # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+    - dist/partie_1/er-bridge_source.zip
+    - dist/partie_1/viztracer.json.tar.gz
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

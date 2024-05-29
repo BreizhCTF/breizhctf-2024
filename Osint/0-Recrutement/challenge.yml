@@ -1,0 +1,30 @@
+name: "0 - Recrutement"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/0_Recrutement.png)
+
+    En tant que nouvel inspecteur de l'ASTRE, vous vous voyez assigner votre première enquête ; un individu du nom d'Alessandro FIZZENTI aurait dérobé une collection très importante.
+    Afin d'élucider l'enquête, vous vous devez de comprendre tous les détails. 
+
+    Pour vous aider, des enquêteurs de votre service sont présents dans la salle. Vous pourrez les identifier grâce au signe distinctif présent sur la photo en pièce jointe.
+    Vous aurez possiblement besoin de les contacter à différents moments de l’enquête ; n'hésitez pas.
+
+    Pour continuer, rentrez ce flag : `BZHCTF{BREIZHXASTRE}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+files:
+    - dist/astre.png
+
+flags:
+    - BZHCTF{BREIZHXASTRE}
+
+version: "0.1"

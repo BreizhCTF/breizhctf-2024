@@ -1,0 +1,21 @@
+services:
+  inthewild:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: inthewild_bzhctf2024
+    #ports:
+      #- "1337:1337"
+    networks:
+      - share_nt
+  sploiter:
+    image: ita/pwn2024
+    tty: true
+    volumes:
+       - ../exploit/:/host
+    networks:
+      - share_nt
+
+networks:
+  share_nt:
+    driver: bridge

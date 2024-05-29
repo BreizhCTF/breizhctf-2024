@@ -1,0 +1,15 @@
+networks:
+  phprce:
+
+
+services:
+  chall:
+    build:
+      dockerfile: Dockerfile
+      context: chall/
+    networks:
+      - phprce
+    ports:
+      - 80:80
+    restart: unless-stopped
+    

@@ -1,0 +1,43 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "CTF A/D - Stolen"
+author: "Itarow"
+category: Forensic
+description: |-4
+    ![network](https://media1.tenor.com/m/c-Gm-PKgxgcAAAAC/rjtonamen-besame.gif)
+
+    Pendant un CTF Attaque/Défense, nous avons déployé une capture réseau pour intercepter les exploits utilisés par les autres équipes.
+    Cependant, nous manquons d'expertise dans l'analyse réseau.
+    Pourriez-vous nous assister en récupérant le flag qui nous a été dérobé ?
+    
+    Auteur : [Itarow](https://twitter.com/0xitarow)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{r34dy_70_pr073c7_y0ur_n37w0rk!}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Forensic
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Très Facile
+
+# Pièces jointes du challenge
+files:
+    - dist/capture.pcap # Pour les gros fichier, ne pas oublier d'utiliser Git LFS
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

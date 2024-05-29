@@ -1,0 +1,42 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Mon super challenge de web"
+author: "xxxDarkXKevinxxx"
+category: Web
+description: |-4
+    Description du challenge en markdown
+    Ne pas oublier qu'il faut faire deux sauts de ligne en markdown pour un saut de ligne sur l'affichage.
+
+    Auteur : [xxxDarkXKevinxxx](https://twitter.com/___)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{FLAG}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - backdoor
+    - python flask
+    - RCE
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Moyen
+    - python
+
+# Pièces jointes du challenge
+files: []
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

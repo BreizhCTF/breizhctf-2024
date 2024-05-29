@@ -1,0 +1,36 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+name: "Usain Bolt"
+author: "Itarow"
+category: Pwn
+description: |-4
+    ![img](/files/chall/usainbolt.jpeg)
+
+    J'ai dev un petit binaire sympa impossible à bypass, tu veux essayer ?
+
+    Note : Le flag se trouve dans le fichier flag.txt à la racine
+
+    Auteur : [Itarow](https://twitter.com/0xitarow)
+
+value: 500
+type: ctfkit
+extra:
+    template_name: usainbolt
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{9"58-F4sTTT!}
+
+topics:
+    - Pwn
+
+tags:
+    - Facile
+
+files:
+  - dist/usain_bolt
+
+version: "0.1"

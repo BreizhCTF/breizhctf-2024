@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Miroir Miroir</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <script src="/altcha.min.js" type="module"></script>
+    <style>
+        body {
+            background: url('wallpaper.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron p-5 rounded shadow bg-white" style="--bs-bg-opacity: .9;">
+            <h1 class="display-4">Miroir Miroir</h1>
+            <p class="lead">Vous pouvez soumettre votre APK sur cette page, qui sera exécuté dans une sandbox. Le résultat sera disponible sous la forme de deux captures d'écran : pré-exécution et post-exécution.</p>
+            <hr class="my-4">
+            <p>Nous vous recommandons de valider au préalable votre solution en local.</p>
+            <div class="mb-3" id="form">
+                <form method="post" action="/" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-8"><input class="form-control" name="file" type="file" id="file"></div>
+                        <div class="col-4">
+                            <div class="d-grid gap-2" id="submit">
+                                <button type="submit"
+                                    class="btn btn-primary btn-block visually-hidden">
+                                    <span id="spinner" class="spinner-border spinner-border-sm visually-hidden" aria-hidden="true"></span>
+                                    <span role="status">Envoyer</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr class="my-4">
+            <div class="container d-inline-flex justify-content-around visually-hidden" id="screenshots">
+                <div id="pre-screen" class="d-inline-flex align-items-center flex-column">
+                    <h4>Screenshot avant installation de votre APK</h4>
+                    <div class="spinner spinner-border m-5" role="status"></div>
+                    <img />
+                </div>
+                <div id="post-screen" class="d-inline-flex align-items-center flex-column">
+                    <h4>Screenshot après installation de votre APK</h4>
+                    <div class="spinner spinner-border m-5" role="status"></div>
+                    <img />
+                </div>
+            </div>
+            <div id="logs">
+                <hr class="my-4">
+                <pre></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/app.js"></script>
+</body>
+
+</html>

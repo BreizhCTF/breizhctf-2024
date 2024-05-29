@@ -1,0 +1,29 @@
+name: "3 - Pygmalion et Galatée"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/3_Pygmalion_Galatee.jpeg)
+
+    Maintenant que vous avez obtenu des informations sur nos cibles, il est nécessaire d'en savoir plus sur leur butin.
+    Le propriétaire légitime de la collection aurait donné des noms aux bustes ; retrouvez-les. 
+
+    Format de flag : `BZHCTF{arthur.bastien}` (noms séparés par des points à la suite en ordre alphabétique)
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{apollon.artemis}
+    - BZHCTF{APOLLON.ARTEMIS}
+    - BZHCTF{Apollon.Artemis}
+
+requirements:
+    - "2 - Partenaire particulier"
+
+version: "0.1"

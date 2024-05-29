@@ -1,0 +1,30 @@
+name: "5 - Homme de peine"
+author: "ASTRE"
+category: OSINT
+description: |-4
+    ![img](/files/chall/5_Homme_De_Peine.jpeg)
+
+    Félicitations, nous en savons désormais plus sur les raisons de leur querelle. Revenons désormais à notre mission principale.
+
+    D'après nos informations, un témoin aurait assisté au vol. Cette personne aurait confié ses doutes concernant Alessandro sur son réseau social favori.
+
+    Également, elle aurait indiqué le prix de cette collection. Retrouvez l'estimation du témoin.
+
+    Format de flag : `BZHCTF{748596}`
+
+    Auteur : [ASTRE](https://twitter.com/astrebzh)
+
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{517450}
+
+requirements:
+    - "4 - Un crime aux Dieux"
+
+version: "0.1"

@@ -1,0 +1,10 @@
+services:
+  usain_bolt:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: usain_bolt_bzhctf2024
+    ports:
+      - "127.0.0.1:1337:1337"
+    cap_drop:
+      - ALL

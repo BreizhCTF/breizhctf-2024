@@ -1,0 +1,4 @@
+
+
+MyCMS v1.0.0 - ERROR :
+%HERE%

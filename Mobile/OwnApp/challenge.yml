@@ -1,0 +1,45 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "OwnApp"
+author: "Worty"
+category: Mobile
+description: |-4
+    ![img](https://media1.tenor.com/m/vW__kIdOl0EAAAAC/android-google-android.gif)
+
+    J'ai implémenté une petite application android qui discute avec un serveur web, et j'ai pris des précautions sur le "Man In The Middle", mon appli est sécurisée maintenant !
+
+    Auteur : [Worty](https://twitter.com/_worty)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: dynamic
+extra:
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{fr1d4_0r_r3v3rs3_?}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - Android
+    - Frida
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Android
+    - Moyen
+  
+# Pièces jointes du challenge
+files:
+    - dist/ownapp.apk
+
+    
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"
+

@@ -1,0 +1,39 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "New World - Partie 1"
+author: "Abyss Watcher"
+category: Misc
+description: |-4
+    ![img](/files/chall/new_world_1.jpg)
+
+    Une immense porte sculptée se dresse devant vous. Répondez à ses questions pour accéder au nouveau monde.
+
+    Auteur : [Abyss Watcher](https://github.com/Abyss-W4tcher)
+
+# Valeur en points du challenge
+value: 500
+# Tous les challenges calculent les points de manière "dynamic"
+type: ctfkit
+extra:
+    template_name: newworld1
+    initial: 500
+    decay: 100
+    minimum: 50
+
+flags:
+    - BZHCTF{w3lc0me_to_the_new_w0rld_x-x-x-x}
+
+# Visible uniquement par les admins du CTFd
+topics:
+    - ASM
+    - Emulation
+
+# Les tags sont visibles par les joueurs
+tags:
+    - Facile
+
+# Specifies what version of the challenge specification was used.
+# Subject to change until ctfcli v1.0.0
+version: "0.1"

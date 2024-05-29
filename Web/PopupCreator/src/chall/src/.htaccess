@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^bugs$ /bugs.php
+RewriteRule ^rate$ /rate.php
+RewriteRule ^fetch$ /fetcher/fetcher.php
