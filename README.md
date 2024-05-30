@@ -29,9 +29,9 @@
 
 **Infra Makers**
 - [La Brosse Adam](https://twitter.com/adam_le_bon)
+- [ShAdE](/)
 - [Slinky](https://x.com/HGSlinky)
 - [Sp4rKy](https://x.com/__Sp4rKy__)
-- [ShAdE](/)
 - [Zeecka](https://x.com/Zeecka_)
 
 ## Full Scoreboard !
