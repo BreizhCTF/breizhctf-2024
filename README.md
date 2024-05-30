@@ -1,3 +1,43 @@
+# Breizh CTF 2024
+
+![Logo](doc/logo-home.png)
+
+
+## Pool (par ordre alphabétique)
+
+**Main**
+- [BDI](https://www.bdi.fr/fr/accueil/) (Organisateur)
+- [Kaluche](https://x.com/kaluche_) (Co-fondateur, lead pool technique)
+- [SaxX](https://x.com/_SaxX_) (Co-fondateur)
+
+**Chall Makers**
+- [Abyss Watcher](https://github.com/Abyss-W4tcher)
+- [HellDiner](https://x.com/DinerHell)
+- [Itarow](https://x.com/0xitarow)
+- [Kira](/)
+- [W00dy](https://x.com/Gaburall)
+- [Worty](https://x.com/_Worty)
+
+**Osint Makers**
+- [Acami](/)
+- [Anonyme 1](/)
+- [Anonyme 2](/)
+- [KØDA](/)
+- [Shinji](https://x.com/shinji_01h)
+- [Spownark](https://x.com/Spow_nark)
+
+
+**Infra Makers**
+- [La Brosse Adam](https://twitter.com/adam_le_bon)
+- [Slinky](https://x.com/HGSlinky)
+- [Sp4rKy](https://x.com/__Sp4rKy__)
+- [ShAdE](/)
+- [Zeecka](https://x.com/Zeecka_)
+
+## Full Scoreboard !
+
+![Scoreboard](doc/full-scoreboard.png)
+
 # Challenges Breizh CTF 2024
 
 Répo contenant les challenges du Breizh CTF 2024
