@@ -1,3 +1,0 @@
-dist/Galahad[[:space:]]Quest.zip filter=lfs diff=lfs merge=lfs -text
-src/** filter=lfs diff=lfs merge=lfs -text
-dist/Galahad_Quest.zip filter=lfs diff=lfs merge=lfs -text
