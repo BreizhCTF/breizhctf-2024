@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:178e974d4d735bbdab060c7fbd0cf23076d6b01e5dc04ce7f3c666fd0a169c30
-size 909
+using Cinemachine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraController : MonoBehaviour
+{
+    private CinemachineVirtualCamera main_cam, back_cam;
+
+    void Start()
+    {
+        foreach(CinemachineVirtualCamera cam in FindObjectsOfType<CinemachineVirtualCamera>())
+        {
+            switch(cam.name)
+            {
+                case "FollowCamera":
+                    main_cam = cam;
+                    break;
+                case "BackFollowCamera":
+                    back_cam = cam;
+                    break;
+            }
+        }
+        main_cam.enabled = true;
+        back_cam.enabled = false;
+    }
+
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            main_cam.enabled = !main_cam.enabled;
+            back_cam.enabled = !main_cam.enabled;
+        }
+    }
+}

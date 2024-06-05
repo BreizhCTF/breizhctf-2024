@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aa1d27b0f6905b46ee74a89cb31ddf28e5255ffe6e079d4cf1031c925f3a06be
-size 325
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExplosionController : MonoBehaviour
+{
+    private long ttl;
+
+
+    void Start()
+    {
+        ttl = 30;
+    }
+
+
+    void FixedUpdate()
+    {
+        ttl--;
+        if (ttl <= 0) Destroy(this.gameObject);
+    }
+}

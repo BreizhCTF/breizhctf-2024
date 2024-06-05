@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da6e0230bc67c7bd02f5e3b6eecb6f786669e83559c8f3230a165a2853d4c4e8
-size 902
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FireballController : MonoBehaviour
+{
+    private long ttl;
+    public GameObject explosion_obj;
+    public PlayerController playerController;
+
+    void Start()
+    {
+        ttl = 100;
+    }
+
+    void explode()
+    {
+        GameObject explosion = Instantiate(explosion_obj);
+        explosion.transform.position = transform.position;
+        explosion.SetActive(true);
+        Destroy(this.gameObject);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        GameObject target = collision.gameObject;
+        if(target.name == "Torch")
+        {
+            playerController.OnTorchLit(collision.transform.position);
+        }
+        if (ttl <= 100-31) explode();
+    }
+
+    void FixedUpdate()
+    {
+        ttl--;
+        if (ttl <= 0) explode();
+    }
+}

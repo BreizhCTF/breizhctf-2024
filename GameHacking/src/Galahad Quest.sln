@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:550c3795cc796a172fe1ce473bb167dfd770306a9655f516a897f2e8dee5213b
-size 1434
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{F990B5F0-202B-4137-73B5-118AC6D0D963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{0BD19B93-4A7B-997B-6B1D-79FD7602D63C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F990B5F0-202B-4137-73B5-118AC6D0D963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F990B5F0-202B-4137-73B5-118AC6D0D963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F990B5F0-202B-4137-73B5-118AC6D0D963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F990B5F0-202B-4137-73B5-118AC6D0D963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD19B93-4A7B-997B-6B1D-79FD7602D63C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD19B93-4A7B-997B-6B1D-79FD7602D63C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD19B93-4A7B-997B-6B1D-79FD7602D63C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD19B93-4A7B-997B-6B1D-79FD7602D63C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

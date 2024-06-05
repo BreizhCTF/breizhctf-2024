@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:19a2663dc0e09412b34868c4580852676318153736280e147147070a8cc11b3b
-size 243
+{
+    "name": "Assets",
+    "roots": ["Assets"],
+    "includes": [],
+    "excludes": [],
+    "options": {
+        "types": true,
+        "properties": true,
+        "extended": false,
+        "dependencies": false
+    },
+    "baseScore": 999
+}
